@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/create_account_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -60,7 +61,12 @@ class OnboardingScreen extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                // TODO: Add navigation
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const CreateAccountScreen(),
+                  ),
+                );
               },
               child: Container(
                 alignment: Alignment.center,
