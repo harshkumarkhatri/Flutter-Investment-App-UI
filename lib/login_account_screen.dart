@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:invest_app/core/create_account_button.dart';
-import 'package:invest_app/core/green_text.dart';
-import 'package:invest_app/login_account_screen.dart';
+import 'package:invest_app/create_account_screen.dart';
 
-class CreateAccountScreen extends StatefulWidget {
-  const CreateAccountScreen({super.key});
+import 'core/create_account_button.dart';
+import 'core/green_text.dart';
+
+class LoginAccountScreen extends StatefulWidget {
+  const LoginAccountScreen({super.key});
 
   @override
-  State<CreateAccountScreen> createState() => _CreateAccountScreenState();
+  State<LoginAccountScreen> createState() => _LoginAccountScreenState();
 }
 
-class _CreateAccountScreenState extends State<CreateAccountScreen> {
-  late TextEditingController _nameController;
+class _LoginAccountScreenState extends State<LoginAccountScreen> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
   late bool _showPassword;
 
   @override
   void initState() {
-    _nameController = TextEditingController();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
 
@@ -60,7 +59,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   height: 20,
                 ),
                 const Text(
-                  "Create an account",
+                  "Login",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 32,
@@ -80,55 +79,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 ),
                 const SizedBox(
                   height: 80,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                  ),
-                  child: TextFormField(
-                    style: const TextStyle(
-                      color: Color(
-                        0xff828282,
-                      ),
-                    ),
-                    controller: _nameController,
-                    cursorColor: Colors.green,
-                    decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.only(
-                        left: 25,
-                        top: 20,
-                        bottom: 20,
-                        right: 25,
-                      ),
-                      hintText: "Full name",
-                      hintStyle: TextStyle(
-                        color: Color(
-                          0xff828282,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            24.0,
-                          ),
-                        ),
-                        borderSide: BorderSide(
-                          color: Color(0xff31A062),
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            24.0,
-                          ),
-                        ),
-                        borderSide: BorderSide(color: Color(0xff828282)),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 18,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -244,7 +194,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   height: 18,
                 ),
                 createAccountButton(
-                  text: "Create account",
+                  text: "Login",
                   context: context,
                   onTap: () {
                     // TODO: Add api implementation
@@ -254,13 +204,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   height: 40,
                 ),
                 greeText(
-                  text: "Already have an account?",
+                  text: "Create an account",
                   onTap: () {
-                  
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const LoginAccountScreen(),
+                        builder: (_) => const CreateAccountScreen(),
                       ),
                     );
                   },
@@ -275,7 +224,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
   @override
   void dispose() {
-    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
 

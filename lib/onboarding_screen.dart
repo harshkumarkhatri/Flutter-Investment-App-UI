@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/create_account_screen.dart';
+import 'package:invest_app/login_account_screen.dart';
 
 import 'core/create_account_button.dart';
 import 'core/green_text.dart';
@@ -80,7 +81,12 @@ class OnboardingScreen extends StatelessWidget {
             greeText(
               text: "Login",
               onTap: () {
-                // TODO: Add navigation
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const LoginAccountScreen(),
+                  ),
+                );
               },
             ),
           ],
