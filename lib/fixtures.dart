@@ -104,4 +104,32 @@ class Fixtures {
           "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
     },
   ];
+
+  // TODO: Fetch from api
+  List<Map<String, String>> bankAccountInfoItems = [
+    {
+      "name": "Jonas Macroni",
+      "details": "Bank of America - 0182128xxx",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "name": "Jonas Macroni",
+      "details": "Zenith Bank - 0182128xxx",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+    {
+      "name": "Jonas Macroni",
+      "details": "Bank of America - 0182128xxx",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "name": "Jonas Macroni",
+      "details": "Zenith Bank - 0182128xxx",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+  ];
 }
