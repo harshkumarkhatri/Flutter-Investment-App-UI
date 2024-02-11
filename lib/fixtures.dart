@@ -63,4 +63,45 @@ class Fixtures {
       "value": "90% return",
     },
   ];
+
+  // TODO: Fetch from api
+  List<Map<String, String>> notificationItems = [
+    {
+      "time": "15min ago",
+      "desc": "Apple stocks just increased Check it out now.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "time": "3 min ago",
+      "desc":
+          "Check out today's best investor. You'll learn from him. This is a long example text which will help us see the effect of overflow in the text.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+    {
+      "time": "15min ago",
+      "desc": "Apple stocks just increased Check it out now.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "time": "3 min ago",
+      "desc": "Check out today's best investor. You'll learn from him.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+    {
+      "time": "15min ago",
+      "desc": "Apple stocks just increased Check it out now.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "time": "3 min ago",
+      "desc": "Check out today's best investor. You'll learn from him.",
+      "imageUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+  ];
 }
