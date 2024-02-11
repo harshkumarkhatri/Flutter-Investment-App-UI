@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/bottombar_switching_screen.dart';
 import 'package:invest_app/core/create_account_button.dart';
 import 'package:invest_app/core/green_text.dart';
 import 'package:invest_app/login_account_screen.dart';
-
-import 'home_screen.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -253,7 +252,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const HomeScreen(),
+                        builder: (_) => const BottombarSwitchingScreen(),
                       ),
                     );
                   },

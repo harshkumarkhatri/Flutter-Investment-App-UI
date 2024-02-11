@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/create_account_screen.dart';
-import 'package:invest_app/home_screen.dart';
 
+import 'bottombar_switching_screen.dart';
 import 'core/create_account_button.dart';
 import 'core/green_text.dart';
 
@@ -202,7 +202,7 @@ class _LoginAccountScreenState extends State<LoginAccountScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const HomeScreen(),
+                        builder: (_) => const BottombarSwitchingScreen(),
                       ),
                     );
                   },
