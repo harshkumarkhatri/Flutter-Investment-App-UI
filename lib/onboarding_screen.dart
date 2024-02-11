@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/create_account_screen.dart';
 
+import 'core/create_account_button.dart';
 import 'core/green_text.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -61,7 +62,9 @@ class OnboardingScreen extends StatelessWidget {
             const SizedBox(
               height: 80,
             ),
-            InkWell(
+            createAccountButton(
+              text: "Create account",
+              context: context,
               onTap: () {
                 Navigator.push(
                   context,
@@ -70,30 +73,6 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 26,
-                ),
-                height: 60,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    16,
-                  ),
-                  color: const Color(
-                    0xff31A062,
-                  ),
-                ),
-                child: const Text(
-                  "Create account",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
             ),
             const SizedBox(
               height: 18,

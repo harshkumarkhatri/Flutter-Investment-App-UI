@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/core/create_account_button.dart';
 import 'package:invest_app/core/green_text.dart';
 
 class CreateAccountScreen extends StatefulWidget {
@@ -236,34 +237,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 const SizedBox(
                   height: 18,
                 ),
-                InkWell(
+                createAccountButton(
+                  text: "Create account",
+                  context: context,
                   onTap: () {
                     // TODO: Add api implementation
                   },
-                  child: Container(
-                    alignment: Alignment.center,
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 26,
-                    ),
-                    height: 60,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        16,
-                      ),
-                      color: const Color(
-                        0xff31A062,
-                      ),
-                    ),
-                    child: const Text(
-                      "Create account",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
                 ),
                 const SizedBox(
                   height: 40,
