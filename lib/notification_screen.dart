@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/fixtures.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
@@ -50,12 +51,77 @@ class NotificationScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              ListView.builder(
-                itemBuilder: (context, index) {
-                  return const SizedBox();
-                },
-                shrinkWrap: true,
-                itemCount: 20,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: ListView.separated(
+                  separatorBuilder: (context, index) {
+                    return const Divider(
+                      height: 28,
+                    );
+                  },
+                  itemBuilder: (context, index) {
+                    final notificationItems = Fixtures().notificationItems;
+                    return Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                  notificationItems[index]['imageUrl']
+                                      .toString(),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 14,
+                        ),
+                        Expanded(
+                          flex: 8,
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  notificationItems[index]['time'].toString(),
+                                  style: const TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.9,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 56.0),
+                                child: Text(
+                                  notificationItems[index]['desc'].toString(),
+                                  style: const TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                  shrinkWrap: true,
+                  itemCount: Fixtures().notificationItems.length,
+                ),
               ),
             ],
           ),
