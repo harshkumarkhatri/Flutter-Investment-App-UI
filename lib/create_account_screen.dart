@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/core/green_text.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -267,18 +268,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 const SizedBox(
                   height: 40,
                 ),
-                InkWell(
+                greeText(
+                  text: "Already have an account?",
                   onTap: () {
                     // TODO: Add pop and push to login screen
                   },
-                  child: const Text(
-                    "Already have an account?",
-                    style: TextStyle(
-                      color: Color(0xff31A062),
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
                 ),
               ],
             ),

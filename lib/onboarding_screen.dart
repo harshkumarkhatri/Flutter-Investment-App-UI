@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/create_account_screen.dart';
 
+import 'core/green_text.dart';
+
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
@@ -96,18 +98,11 @@ class OnboardingScreen extends StatelessWidget {
             const SizedBox(
               height: 18,
             ),
-            InkWell(
+            greeText(
+              text: "Login",
               onTap: () {
                 // TODO: Add navigation
               },
-              child: const Text(
-                "Login",
-                style: TextStyle(
-                  color: Color(0xff31A062),
-                  fontSize: 17,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
             ),
           ],
         ),
