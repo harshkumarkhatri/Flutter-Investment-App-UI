@@ -132,4 +132,33 @@ class Fixtures {
           "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
     },
   ];
+
+  // TODO: Fetch from api
+  List<Map<String, String>> profileItems = [
+    {
+      "itemName": "Contact Info",
+      "logoUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "itemName": "Source of Funding Info",
+      "logoUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+    {
+      "itemName": "Bank Account Info",
+      "logoUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+      "itemName": "Document Info",
+      "logoUrl":
+          "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+    },
+    {
+      "itemName": "Settings",
+      "logoUrl":
+          "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+  ];
 }

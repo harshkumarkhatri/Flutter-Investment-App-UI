@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/home_screen.dart';
+import 'package:invest_app/profile_screen.dart';
 
 class BottombarSwitchingScreen extends StatefulWidget {
   const BottombarSwitchingScreen({super.key});
@@ -23,10 +24,7 @@ class _BottombarSwitchingScreenState extends State<BottombarSwitchingScreen> {
       'Index 2: School',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
