@@ -18,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // TODO: This will take back to the home screen
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 20.0,
