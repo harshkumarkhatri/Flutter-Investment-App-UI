@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/bank_account_info_screen.dart';
+import 'package:invest_app/contact_info_screen.dart';
 import 'package:invest_app/fixtures.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -110,6 +111,14 @@ class ProfileScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
+                          if (index == 0) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const ContactInfoScreen(),
+                              ),
+                            );
+                          }
                           if (index == 2) {
                             Navigator.push(
                               context,
