@@ -161,4 +161,32 @@ class Fixtures {
           "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
     },
   ];
+
+  // TODO: Fetch from api
+  List<Map<String, dynamic>> myAssetsHistoryItems = [
+    {
+      "amount": "Rp 200.00",
+      "isDebit": true,
+      "stock": "APPL",
+      "date": "TUE 22 Jun 2020",
+    },
+    {
+      "amount": "Rp 200.00",
+      "isDebit": false,
+      "stock": "TLKM",
+      "date": "TUE 22 Jun 2020",
+    },
+    {
+      "amount": "Rp 200.00",
+      "isDebit": true,
+      "stock": "FB",
+      "date": "TUE 22 Jun 2020",
+    },
+    {
+      "amount": "Rp 200.00",
+      "isDebit": false,
+      "stock": "APPL",
+      "date": "TUE 22 Jun 2020",
+    },
+  ];
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/fixtures.dart';
+import 'package:invest_app/my_assets_screen.dart';
 import 'package:invest_app/notification_screen.dart';
 
 import 'nav_drawer.dart';
@@ -129,23 +130,33 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        Container(
-                          alignment: Alignment.center,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              16,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const MyAssetsScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                16,
+                              ),
+                              color: Colors.white,
                             ),
-                            color: Colors.white,
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 25,
-                          ),
-                          child: const Text(
-                            "Invest now",
-                            style: TextStyle(
-                              color: Color(
-                                0xff31A078,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 25,
+                            ),
+                            child: const Text(
+                              "Invest now",
+                              style: TextStyle(
+                                color: Color(
+                                  0xff31A078,
+                                ),
                               ),
                             ),
                           ),
